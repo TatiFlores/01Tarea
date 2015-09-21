@@ -36,9 +36,9 @@ suma_s = -fa
 
 for i in range(n): #range(n) para que no llegue al ultimo termino ( f(b) )
     if(i % 2 == 0):
-        suma_s+ = (2*power[i])
+        suma_s+= (2*power[i])
     else:
-        suma_s+ = (4*power[i])
+        suma_s+= (4*power[i])
 
 integral_s = (h * (suma_s + fa + fb) ) / 3
 print "Luminosidad total del sol/regla de simpson:",integral_s
