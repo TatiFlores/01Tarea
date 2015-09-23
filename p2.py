@@ -1,5 +1,6 @@
 import numpy as np
 from math import *
+from astropy import units as u
 
 wavelength = np.loadtxt('sun_AM0.dat', usecols=[0])
 power = np.loadtxt('sun_AM0.dat', usecols=[1])
@@ -26,7 +27,8 @@ for i in range(len(wavelength)):
     suma_t+=(2*power[i])
 
 integral_t = (h * (fa + fb + suma_t)) / 2
-print "Luminosidad total del sol/metodo del trapecio:", integral_t
+integral_t*=(u.W / (u.m)**2)
+print "Luminosidad total del sol/metodo del trapecio:", integral_t.cgs
 
 
 
@@ -41,4 +43,5 @@ for i in range(n): #range(n) para que no llegue al ultimo termino ( f(b) )
         suma_s+= (4*power[i])
 
 integral_s = (h * (suma_s + fa + fb) ) / 3
-print "Luminosidad total del sol/regla de simpson:",integral_s
+integral_s*=(u.W / (u.m)**2)
+print "Luminosidad total del sol/regla de simpson:",integral_s.cgs
