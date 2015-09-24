@@ -27,5 +27,5 @@ def trapecio(x,y,n):
 K_t = trapecio(wavelength, power, (len(wavelength)-1))
 K_t*= (u.W / (u.m)**2)
 Ls_t = K_t * 4 * np.pi * const.au**2
-print "Constante solar [W/m^2]:", K_t
-print "Luminosidad total del sol [W]:", Ls_t
+print "Constante solar:", K_t
+print "Luminosidad total del sol:", Ls_t
