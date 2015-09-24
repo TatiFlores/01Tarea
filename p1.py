@@ -10,7 +10,7 @@ power*= 100 #[ergs/(s*cm2*A)]
 
 semilogx(wavelength,power)
 xlabel('$Longitud\,de\,onda\,[\AA] $')
-ylabel('$Flujo\, [ergs \cdot s^{-1} \cdot cm^{2} \cdot \AA]$')
+ylabel('$Intensidad\, [ergs \cdot s^{-1} \cdot cm^{2} \cdot \AA]$')
 title('$Espectro\,solar$')
 grid(True)
 savefig("Espectro_solar")
