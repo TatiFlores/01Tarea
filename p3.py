@@ -43,6 +43,7 @@ kb=const.k_B
 c=const.c
 
 n=2
+integral=simpson_puntomedio(n, 0, (np.pi/2), func)
 eps=np.abs(integral - ((np.pi)**4) / 15)
 while eps>=0.0001:
     integral=simpson_puntomedio(n, 0, (np.pi/2), func)
