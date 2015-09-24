@@ -38,12 +38,12 @@ def func(x):
     return (((np.tan(x))**3.)*((np.cos(x))**(-2.0)))/(np.exp(np.tan(x))-1)
 
 T=5778*u.K
-h=const.h.cgs
-kb=const.k_B.cgs
-c=const.c.cgs
+h=const.h
+kb=const.k_B
+c=const.c
 
 n=2
-eps=10
+eps=1
 while eps>=0.0001:
     integral=simpson_puntomedio(n, 0, (np.pi/2), func)
     eps=np.abs(integral - ((np.pi)**4) / 15)
@@ -51,6 +51,3 @@ while eps>=0.0001:
 
 energia=integral*((2 * np.pi * h / c**2) * (kb * T / h)**4)
 print 'Energia total por unidad de area emitida por un cuerpo negro con T=5778 [K]: ', energia
-
-ideal=T**4 * const.sigma_sb
-print 'Caso ideal: ', ideal.cgs
