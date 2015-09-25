@@ -1,3 +1,8 @@
+'''
+En este codigo se grafica el espectro solar
+'''
+
+
 import numpy as np
 from pylab import *
 
